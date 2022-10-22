@@ -13,7 +13,7 @@ type Protocol struct {
 
 func (p *Protocol) Does() {
 	// I want it to say SMB works over Port 445
-  // And, SSH works over port 22
+  	// And, SSH works over port 22
 	fmt.Printf("The %s Protocol performs %s", p.Name, p.Job)
 	fmt.Printf(" and works over port %d", p.NumberOfPort)
 	fmt.Println()
