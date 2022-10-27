@@ -11,6 +11,7 @@ import (
 var MIN = 0
 var MAX = 94
 
+// Random Password Generator
 func random(min, max int) int {
 	return rand.Intn(max-min) + min
 }
@@ -31,8 +32,9 @@ func getString(len int64) string {
 	return temp
 }
 
+// Set password length in var Length
 func main() {
-	var LENGTH int64 = 21
+	var LENGTH int64 = 21 // pw length
 
 	arguments := os.Args
 	switch len(arguments) {
@@ -45,12 +47,15 @@ func main() {
 			LENGTH = 8
 		}
 	default:
+		// Make output easier to read
+		// Prints empty space above number
 		fmt.Println("")
 	}
 
 	SEED := time.Now().Unix()
 	rand.Seed(SEED)
 	fmt.Println(getString(LENGTH))
+	// Prints emptyspace below number
 	fmt.Println("")
 
 }
